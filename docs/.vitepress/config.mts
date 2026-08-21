@@ -17,7 +17,8 @@ export default defineConfig({
     logo: '/favicon.png',
     nav: [
       { text: '首页', link: '/' },
-      { text: '文档', link: '/markdown-examples' }
+      { text: '文档', link: '/markdown-examples' },
+      { text: '主站', link: 'https://api.huidev.com' }
     ],
 
     sidebar: [
