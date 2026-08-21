@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   cleanUrls: true,
+  lang: 'zh-CN',
   title: "风绘 API",
   description: "A VitePress Site",
   themeConfig: {
