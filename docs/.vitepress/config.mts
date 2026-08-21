@@ -6,8 +6,15 @@ export default defineConfig({
   lang: 'zh-CN',
   title: "风绘 API",
   description: "A VitePress Site",
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.png' }]
+  ],
+  sitemap: {
+    hostname: 'https://docs.api.huidev.com'
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/favicon.png',
     nav: [
       { text: '首页', link: '/' },
       { text: '文档', link: '/markdown-examples' }
