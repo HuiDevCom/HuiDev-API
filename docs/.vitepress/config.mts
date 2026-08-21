@@ -1,4 +1,7 @@
 import { defineConfig } from 'vitepress'
+import { createRequire } from 'module'
+const require = createRequire(import.meta.url)
+const pkg = require('vitepress/package.json')
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -18,7 +21,8 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '文档', link: '/markdown-examples' },
-      { text: '主站', link: 'https://api.huidev.com' }
+      { text: '主站', link: 'https://api.huidev.com' },
+     // { text: `VitePress ${pkg.version}`, link: 'https://vitepress.dev/zh/' }
     ],
 
     sidebar: [
