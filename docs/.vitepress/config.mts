@@ -15,10 +15,32 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://docs.api.huidev.com'
   },
+  lastUpdated: true, // 首次配置不会立即生效，需 git 提交后爬取时间戳
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/favicon.png',
     darkModeSwitchLabel: '深浅模式',
+    sidebarMenuLabel: '目录',
+    returnToTopLabel: '返回顶部',
+    outline: {
+      level: [2, 4], // 显示2-4级标题
+      label: '当前页大纲' // 文字显示
+    },
+    editLink: {
+      pattern: 'https://github.com/HuiDevCom/HuiDev-API/edit/main/docs/:path',
+      text: '在GitHub编辑本页'
+    },
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short', // 可选值 full、long、medium、short
+        timeStyle: 'medium' // 可选值 full、long、medium、short
+      }
+    },
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
     // 本地搜索
     search: {
       provider: 'local',
