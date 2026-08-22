@@ -16,6 +16,11 @@ export default defineConfig({
     hostname: 'https://docs.api.huidev.com'
   },
   lastUpdated: true, // 首次配置不会立即生效，需 git 提交后爬取时间戳
+  markdown: {
+    image: {
+      lazyLoading: true // 开启图片懒加载
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/favicon.png',
